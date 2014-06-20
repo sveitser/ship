@@ -1,3 +1,5 @@
-language: c
+language: python
+version:
+    - 2.7
 script:
     - gcc test.c
