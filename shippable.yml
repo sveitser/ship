@@ -2,7 +2,7 @@ language: python
 python:
     - "2.7"
 install:
-    - pip install -y nose coverage nosexcover
+    - pip install nose coverage nosexcover
 # script to run before running tests
 before_script:
     - mkdir -p shippable/codecoverage
