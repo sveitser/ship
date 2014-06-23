@@ -1,5 +1,28 @@
 language: python
-version:
-    - 2.7
+python:
+    - "2.7"
+install:
+    - pip install nose coverage nosexcover
+# script to run before running tests
+before_script:
+    - mkdir -p shippable/codecoverage
+    - mkdir -p shippable/testresults
+
+# command to run tests
 script:
-    - gcc test.c
+    - ./shippable.sh
+
+# notification settings
+notifications:
+    email:
+        recipients:
+            - mathis@ambiclimate.com
+            #- tim@ambiclimate.com
+        on_success: always
+        on_failure: always
+
+# whitelist
+#branches:
+#    only:
+#        - master
+
