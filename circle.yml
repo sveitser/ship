@@ -1,7 +1,3 @@
-dependencies:
-    pre:
-        - pip install nose coverage nosexcover
-
 test:
     override:
         - ./test.sh
